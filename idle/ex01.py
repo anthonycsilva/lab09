@@ -1,16 +1,16 @@
-def mult(matriz, escalar):
-    matriz_mult = []
-    quant_linhas = len(matriz) # Conta quantas linhas existem
-    quant_colunas = len(matriz[0]) # Conta quantos elementos têm em uma linha
-    for i in range(quant_linhas):
-        # Cria uma nova linha na matriz_mult
-        matriz_mult.append([])
-        for j in range(quant_colunas):
-            # Multiplicando cada elemento pelo escalar
-            mult = escalar * matriz[i][j]
-            matriz_mult[i].append(mult)
-    return matriz_mult
+def mult(matriz, multiplo):
+    '''essa função recebe uma matriz e retorna ela multiplicada pelo numero que foi inserido'''
+    '''list, int -> list'''
+    resultado = list()
+    qtd_linhas = len(matriz)
+    qtd_colunas = len(matriz[0])
 
+    for i in range(qtd_linhas):
+        resultado.append([])
+        for j in range(qtd_colunas):
+            mult = multiplo * matriz[i][j]
+            list.append(resultado[i], mult)
+    return resultado
 
 
 print(mult([[1,8,-3],[4,-2,5]],2))
